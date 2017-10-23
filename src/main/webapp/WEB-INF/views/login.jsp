@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="sform" uri="http://www.springframework.org/tags/form"%>
 
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
@@ -66,8 +67,8 @@
 	<form action="/mono-application/home" style="width: 300px; margin: 0 auto;">
 		<table>
 			<tr>
-				<td>Login ID</td>
-				<td><input type="text" placeholder="Enter login ID"></td>
+				<td><sform:label path="username">Login ID</sform:label> </td>
+				<td><sform:input path="username" name="username" id="username" placeholder="Enter login ID" /> </td>
 			</tr>
 			<tr>
 				<td>Password</td>
@@ -75,8 +76,8 @@
 			</tr>
 		</table>
 		<br />
-		<button type="button">Sign in</button>
-		<button type="reset">Reset</button>
+		<sform:button type="button">Sign in</sform:button>
+		<sform:button type="reset">Reset</sform:button>
 
 	</form>
 
