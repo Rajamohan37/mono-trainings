@@ -11,9 +11,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class FirstController {
 	
-	@RequestMapping(value="/raju")
+	@RequestMapping(value="/login")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
-		return new ModelAndView("raju");
+		return new ModelAndView("login");
 	}
 
 }
